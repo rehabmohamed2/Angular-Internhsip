@@ -1,0 +1,21 @@
+<app-navbar />
+
+<main class="blog-container">
+  <h1 class="page-title">Blog</h1>
+
+  <div class="blog-posts">
+    @for (post of blogPosts; track post.id) {
+      <article class="blog-post">
+        <h2 class="post-title">{{ post.title }}</h2>
+        <div class="post-meta">
+          <span class="post-date">{{ post.date }}</span>
+          <div class="divider"></div>
+          <span class="post-category">{{ post.category }}</span>
+        </div>
+        <p class="post-description">{{ post.description }}</p>
+      </article>
+    }
+  </div>
+</main>
+
+<app-footer />

@@ -1,0 +1,49 @@
+<app-navbar />
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Hi, I am John,<br />Creative Technologist</h1>
+    <p>
+      Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+      Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+    </p>
+    <button class="btn">Download Resume</button>
+  </div>
+
+  <div class="hero-image">
+    <img src="assets/images/photo.png" alt="profile" />
+  </div>
+</section>
+
+<!-- Recent Posts Section -->
+<section class="posts-section">
+  <div class="posts-header">
+    <h2>Recent posts</h2>
+    <a href="#" class="view-all">View all</a>
+  </div>
+
+  <div class="posts-container">
+    @for (post of recentPosts; track post.id) {
+      <div class="post-card" [class.active-card]="post.isActive">
+        <h3>{{ post.title }}</h3>
+
+        <div class="post-info">
+          <span>{{ post.date }}</span>
+          <div class="divider"></div>
+          <span>{{ post.category }}</span>
+        </div>
+
+        <p>{{ post.description }}</p>
+      </div>
+    }
+  </div>
+</section>
+
+<!-- Featured Works Section -->
+<section class="featured-section">
+  <h2>Featured works</h2>
+  <app-card [data]="cardData" />
+</section>
+
+<app-footer />

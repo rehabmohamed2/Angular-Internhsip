@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  font-family: 'Heebo', Arial, Helvetica, sans-serif;
+  background: var(--white);
+  padding: 2rem 4rem;
+}
+
+@media (max-width: 900px) {
+  :host {
+    padding: 1.5rem 2rem;
+  }
+}

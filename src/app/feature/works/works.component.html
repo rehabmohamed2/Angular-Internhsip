@@ -1,0 +1,25 @@
+<app-navbar />
+
+<main class="works-container">
+  <h1 class="page-title">Work</h1>
+
+  <div class="works-list">
+    @for (work of workItems; track work.id) {
+      <article class="work-item" [routerLink]="['/works', work.id]">
+        <div class="work-image">
+          <img [src]="work.image_src" [alt]="work.title" />
+        </div>
+        <div class="work-content">
+          <h2 class="work-title">{{ work.title }}</h2>
+          <div class="work-meta">
+            <span class="work-year">{{ work.year }}</span>
+            <span class="work-category">{{ work.category }}</span>
+          </div>
+          <p class="work-description">{{ work.description }}</p>
+        </div>
+      </article>
+    }
+  </div>
+</main>
+
+<app-footer />

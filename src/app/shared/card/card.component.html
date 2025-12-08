@@ -1,0 +1,17 @@
+@for(item of data; track item.id){
+<div class="main">
+  <div class="img-container">
+    <img [src]="item.image_src" alt="" />
+  </div>
+  <div class="text-container">
+    <h1 class="title">{{ item.title }}</h1>
+    <div class="tag">
+      <p class="date">{{ item.date }}</p>
+      <p class="detail-text">{{ item.detail_text }}</p>
+    </div>
+    <p class="description">
+      {{ item.description }}
+    </p>
+  </div>
+</div>
+}
